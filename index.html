@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Game of Life</title>
+        <style type="text/css">
+            html,
+            body {
+                padding: 0px;
+                margin: 0px;
+                overflow: hidden;
+                background-color: #222;
+            }
+
+            nav {
+                position: absolute;
+                top: 0px;
+                right: 0px;
+
+                &:hover {
+                    opacity: 1;
+                    translate: 0px 0px;
+
+                    .box {
+                        translate: 0px 0px !important;
+                    }
+                }
+
+                .box {
+                    background-color: #1C1C1C;
+                    display: grid;
+                    grid-template-columns: 1fr;
+                    border-bottom-left-radius: 15px;
+                    border-left: 2px solid #000;
+                    border-bottom: 2px solid #000;
+                    box-shadow: 0px 0px 10px #00000079;
+                    transition: all 0.3s ease;
+
+                    &.autohide {
+                        translate: 50px 0px;
+                    }
+                }
+
+                span {
+                    padding: 15px;
+                    color: #fff;
+                    text-decoration: none;
+                    cursor: pointer;
+
+                    &:hover {
+                        opacity: 0.7;
+                    }
+                }
+            }
+        </style>
+    </head>
+
+    <body>
+        <canvas></canvas>
+        <nav>
+            <div class="box">
+                <span class="resume">&gt;</span>
+                <span class="pause">||</span>
+                <span class="reset">R</span>
+                <span class="step">.</span>
+            </div>
+        </nav>
+
+        <script src="js/main.js" type="module"></script>
+    </body>
+
+</html>
